@@ -23,10 +23,11 @@
     <script>
       $("article").hide();
 
-      var parsePx = function(px) {
-        var regex = /(\d+)\s*px/;
-        return parseInt(regex.exec(px)[1], 10);
-      };
+      var version = "0.0.0",
+          parsePx = function(px) {
+            var regex = /(\d+)\s*px/;
+            return parseInt(regex.exec(px)[1], 10);
+          };
 
       $("form").submit(function(e) {
         e.preventDefault();
