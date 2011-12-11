@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <style>
+      html {font-size: 10px; line-height: 1.5;}
+      pre {float: left;}
+      article {margin-bottom: 50px;}
+      .clearfix:before, .clearfix:after {content: ""; display: table;}
+      .clearfix:after {clear: both;}
+      .clearfix {zoom: 1;}
+    </style>
+  </head>
+  <body>
+    <h1>multi column text</h1>
+    <article class=clearfix></article>
+    <aside>
+      <form>
+        <textarea cols=50 rows=5></textarea>
+        <input type=submit></input>
+      </form>
+    </aside>
+    <script>
+      $("article").hide();
+
+      var parsePx = function(px) {
+        var regex = /(\d+)\s*px/;
+        return parseInt(regex.exec(px)[1], 10);
+      };
+
+      $("form").submit(function(e) {
+        e.preventDefault();
+        var text = $("textarea").val(),
+            maxHeight = screen.height,
+            fontSize = parsePx($("html").css("font-size")),
+            lineHeight = parsePx($("html").css("line-height")) + fontSize,
+            lines = text.split("\n"),
+            linesLength = lines.length,
+            linesPerColumn = Math.floor(maxHeight/lineHeight),
+            i = 0,
+            article = $("article");
+
+        article.hide();
+        article.empty();
+
+        for (i = 0; i < linesLength; i = i + linesPerColumn) {
+          pre = lines.slice(i, i+linesPerColumn).join("\n");
+          article.append("<pre>" + pre + "</pre>");
+        }
+        return article.fadeIn("fast");
+      });
+    </script>
+  </body>
+</html>
