@@ -2,12 +2,17 @@
     "name": "presto"
   , "version": "0.9.0"
   , "private": true
+  , "author": "eric thul <thul.eric@gmail.com>"
+  , "bugs": "https://github.com/ethul/presto/issues"
   , "dependencies": {
       "express": "2.4.7"
     , "jade": ">= 0.0.1"
-    , "less": ">= 1.2.1"
-    , "uglify-js": ">= 1.2.5"
+    , "connect-uglify-js": ">= 0.0.1"
     , "less4clients": ">= 0.1.1"
     , "coffee-script": ">= 1.2.0"
+  }
+  , "repository": {
+      "type": "git"
+    , "url": "git://github.com/ethul/presto.git"
   }
 }

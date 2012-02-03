@@ -2,8 +2,8 @@
 require("coffee-script");
 
 var express = require("express")
-  , less = require("less")
   , less4clients = require("less4clients")
+  , uglify = require("connect-uglify-js")
   , app = module.exports = express.createServer();
 
 app.configure(function(){
@@ -12,6 +12,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.static(__dirname + "/public"));
+  app.use("/assets",uglify.middleware(__dirname + "/public/javascripts"));
   app.use(app.router);
   less4clients.createInstance({server: app, publicPath: __dirname + "/public/stylesheets", compress: true});
 });
