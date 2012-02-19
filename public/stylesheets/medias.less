@@ -1,0 +1,53 @@
+// Squeezed layout
+@media screen and (min-width: 0em) and (max-width: 15em) {
+  h1 {.enormous;}
+}
+
+// Mobile narrow layout 240px
+@media screen and (min-width: 15em) {
+  h1 {.enormous;}
+  aside {width: @4cols;}
+  textarea {
+    width: @4cols - @1col/2;
+    height: @5cols - @1col/2;
+  }
+  .wrapper {margin-top: @1col;}
+}
+
+// Mobile wide layout 480px
+@media screen and (min-width: 30em) {
+  h1 {
+    .gigantic;
+    line-height: @1col/20;
+  }
+  aside {width: @7cols;}
+  textarea {
+    width: @7cols - @1col/2;
+    height: @3cols;
+  }
+  .wrapper {margin-top: @1col/2;}
+}
+
+// Tablet layout 600px
+@media screen and (min-width: 37.5em) {
+  h1 {
+    .gargantuan;
+    line-height: @1col/50;
+  }
+  aside {width: @5cols;}
+  textarea {
+    width: @5cols - @1col/2;
+    height: @6cols;
+  }
+  .wrapper {margin-top: @1col;}
+}
+
+// Wide layout 912px
+@media screen and (min-width: 57em) {
+  textarea {height: @4cols + @1col/2;}
+}
+
+// Wider layout 1248px 
+@media screen and (min-width: 78em) {
+  textarea {height: @6cols;}
+}

@@ -1,6 +1,36 @@
-
 @import "boilerplate.less";
+@import "frame.less";
+@import "fonts.less";
+@import "borders.less";
+
+@borderWidth: 2px;
+@borderRadius: 0px;
 
 article {font-size: 10px; line-height: 1.5; margin-bottom: 50px;}
 article pre {float: left; margin-right: 15px;}
 article pre:last-child {margin-right: 0;}
+
+aside {
+  margin: 0 auto;
+}
+
+textarea {
+  .border-rounded(@borderRadius);
+  border-width: @borderWidth;
+  resize: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+h1 {
+  .font-upper-east-side;
+  .gargantuan;
+  font-weight: normal;
+  text-align: center;
+}
+
+@import "medias.less";
