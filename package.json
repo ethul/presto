@@ -1,6 +1,6 @@
 {
     "name": "presto"
-  , "version": "0.9.3"
+  , "version": "0.9.4"
   , "private": true
   , "author": "eric thul <thul.eric@gmail.com>"
   , "contributors": [{"name": "eric thul", "email": "thul.eric@gmail.com"}]
