@@ -1,6 +1,6 @@
 {
     "name": "presto"
-  , "version": "0.9.0"
+  , "version": "0.9.1"
   , "private": true
   , "author": "eric thul <thul.eric@gmail.com>"
   , "bugs": "https://github.com/ethul/presto/issues"
