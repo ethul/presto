@@ -6,9 +6,20 @@
 @borderWidth: 2px;
 @borderRadius: 0px;
 
-article {font-size: 10px; line-height: 1.5; margin-bottom: 50px;}
-article pre {float: left; margin-right: 15px;}
-article pre:last-child {margin-right: 0;}
+article {
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0 5px 25px 5px;
+
+  pre {
+    float: left;
+    margin-right: 15px;
+  }
+
+  pre:last-child {
+    margin-right: 0;
+  }
+}
 
 aside {
   margin: 0 auto;
@@ -22,15 +33,13 @@ textarea {
   margin: 0 auto;
 }
 
-.wrapper {
-  text-align: center;
-}
-
 h1 {
   .font-upper-east-side;
   .gargantuan;
   font-weight: normal;
   text-align: center;
+  margin-bottom: 0;
+  margin-top: 25px;
 }
 
 @import "medias.less";
