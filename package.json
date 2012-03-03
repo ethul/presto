@@ -1,8 +1,9 @@
 {
     "name": "presto"
-  , "version": "0.9.2"
+  , "version": "0.9.3"
   , "private": true
   , "author": "eric thul <thul.eric@gmail.com>"
+  , "contributors": [{"name": "eric thul", "email": "thul.eric@gmail.com"}]
   , "bugs": "https://github.com/ethul/presto/issues"
   , "dependencies": {
       "express": "2.4.7"
@@ -13,4 +14,8 @@
       "type": "git"
     , "url": "git://github.com/ethul/presto.git"
   }
+  , "licenses": [{
+      "type": "MIT"
+    , "url": "https://github.com/ethul/connect-uglify-js/raw/master/LICENSE"
+  }]
 }
