@@ -8,8 +8,6 @@
       "express": "2.4.7"
     , "jade": ">= 0.0.1"
     , "connect-uglify-js": ">= 0.0.1"
-    , "less4clients": ">= 0.1.1"
-    , "coffee-script": ">= 1.2.0"
   }
   , "repository": {
       "type": "git"
