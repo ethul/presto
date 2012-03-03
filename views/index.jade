@@ -1,0 +1,14 @@
+h1 Presto
+article.clearfix
+  script(type="text/x-handlebars")
+    |{{#each Presto.mainController}}
+    |  <pre>{{this}}</pre>
+    |{{/each}}
+aside
+  form
+    script(type="text/x-handlebars")
+      {{view Ember.TextArea valueBinding="Presto.textController.text.value"}}
+script(src="/javascripts/jquery.min.js")
+script(src="/javascripts/ember.min.js")
+script(src="/assets/presto.js")
+script(src="/assets/index.js")
